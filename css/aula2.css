@@ -1,0 +1,105 @@
+*{ /* essas estilizações serão aplicadas a todos os elementos do HTML */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	/*background-image: url('../img/fotofundo.jpeg'); */
+	background-color: #9932FF;
+	/* background-position: center; código usado se o background fosse uma imagem*/
+	background-size: auto 100vh; /*largura da imagem automática, altura sempre igual a altura da tela*/
+	font-family: Arial;
+	height: 100vh; /* garantindo que a altura do body seja sempre a mesma */
+}
+
+/* parênteses é igual if (java) */
+@media(min-width: 400px){ /* se a tela tiver pelo menos de 400px, essses estilos serão carregados*/	
+	.paragrafo{
+		font-size: 130%;
+	}	
+}	
+
+header{ 
+	height: 100vh; /* fazendo o header ocupar toda a altura da tela */
+	display: flex;
+	justify-content: center; /* centralizando horizontalmente */
+	align-items: center; /* centralizando verticalmente */
+}	
+
+.menu{
+	background-color: white;
+	position: fixed;
+	width: 100vw;
+	top: 0; /* deixar o nav colado no topo da página */
+}
+
+.menu ul{
+	display: flex;
+	/* justify-content: space-between; */ /* separa os tópicos do menu entre eles (os da ponta ficam grudados nas laterais)*/
+	justify-content: space-around;
+}
+
+.menu ul li a:hover {
+    background-color:#D6D6D6;
+    color: #6D6D6D;
+    border-bottom:3px solid #0000CD;
+}
+
+.menu li:hover ul, .menu li.over ul{
+	background-color:#EDEDED;
+	display:block;
+}
+
+.menu li ul{
+	position:absolute; 
+	top:25px; 
+	left:0;
+	background-color:#fff; 
+	display:none;
+}
+
+.menu li{
+	list-style: none;
+}
+
+.menu a{
+	display: block; /* definindo que o valor padrão de a deixa de ser inline e vira block */
+	padding: 10px 20px;
+	color: black;
+}	
+
+a{
+	text-decoration: none;
+}
+
+.site-title, .site-subtitle{
+	color: whitesmoke;
+	text-align: center;
+}
+.site-title{
+	font-size: 3em;
+}	
+.site-subtitle{
+	font-style: italic;
+}
+
+.img-portfolio{
+	width: 150px;
+	height: 250px;
+}
+
+.paragrafo{
+	text-align: justify;
+	padding: 1vh;
+	font-size: 120%;
+}
+
+#sobre, #portfolio, #contato{
+	padding-left:1vh;
+}
+
+.email{
+	text-align: center;
+	text-decoration: italic;
+}	
